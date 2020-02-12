@@ -55,6 +55,11 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
     Route::post('kelompok-pelajaran/store', 'Admin\KelompokPelajaranController@store')->name('kelompok-pelajaran.store');
     Route::post('kelompok-pelajaran/update/{id}', 'Admin\KelompokPelajaranController@update')->name('kelompok-pelajaran.update');
     Route::delete('kelompok-pelajaran/{id}', 'Admin\KelompokPelajaranController@destroy')->name('kelompok-pelajaran.delete');
+
+    Route::get('mata-pelajaran', 'Admin\MataPelajaranController@index')->name('mata-pelajaran');
+    Route::post('mata-pelajaran/store', 'Admin\MataPelajaranController@store')->name('mata-pelajaran.store');
+    Route::post('mata-pelajaran/update/{id}', 'Admin\MataPelajaranController@update')->name('mata-pelajaran.update');
+    Route::delete('mata-pelajaran/{id}', 'Admin\MataPelajaranController@destroy')->name('mata-pelajaran.delete');
 });
 
 Route::group(['middleware' => ['auth', 'guru'], 'prefix' => 'guru'], function () {
