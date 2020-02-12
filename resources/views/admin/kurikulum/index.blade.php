@@ -6,7 +6,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-             <button class="btn btn-info" data-toggle="modal" data-target="#tambah-data">Tambah Kurikulum</button>
+              <h3 class="box-title">Data Kurikulum</h3>
+             <a style="margin-right=5px" class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#tambah-data">Tambah Kurikulum</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -20,18 +21,18 @@
                 </tr>
                 </thead>
                 <tbody>
-					@foreach($data as $user)
-					<tr>
-                        <td>{{$loop->iteration}}</td>
-						<td>{{$user->nama}}</td>
-						<td>{!!$user->status?"<i  style='color:green' class='fa fa-check'></i>":"<i style='color: red'
-							class=' fa fa-close'></i>"!!}</td>
-						<td>
-                        <a href="" type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#edit_modal{{$user->id}}"> <i class="fa fa-edit"></i> Edit</a>
-					    <a href="" type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#delete_modal{{$user->id}}"><i class="fa fa-trash"></i> Delete</a>
-						</td>
-					</tr>
-					<div class="modal fade" tabindex="-1" role="dialog" id="delete_modal{{$user->id}}">
+                  @foreach($data as $user)
+                  <tr>
+                                <td>{{$loop->iteration}}</td>
+                    <td>{{$user->nama}}</td>
+                    <td>{!!$user->status?"<i  style='color:green' class='fa fa-check'></i>":"<i style='color: red'
+                      class=' fa fa-close'></i>"!!}</td>
+                    <td>
+                                <a href="" type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#edit_modal{{$user->id}}"> <i class="fa fa-edit"></i> Edit</a>
+                      <a href="" type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#delete_modal{{$user->id}}"><i class="fa fa-trash"></i> Delete</a>
+                    </td>
+                  </tr>
+                  <div class="modal fade" tabindex="-1" role="dialog" id="delete_modal{{$user->id}}">
                             <div class="modal-dialog modal-sm" role="document">
                               <div class="modal-content">
                                 <div class="modal-body text-center">

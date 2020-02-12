@@ -6,7 +6,8 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-             <button class="btn btn-info" data-toggle="modal" data-target="#tambah-data">Tambah Tahun Akademik</button>
+              <h3 class="box-title">Data Akademik</h3>
+             <a style="margin-right=5px" class="pull-right btn btn-primary btn-sm" data-toggle="modal" data-target="#tambah-data">Tambah Akademik</a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
